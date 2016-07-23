@@ -210,7 +210,7 @@
         </div>
 
         <div class="step">
-            <h2 style="margin-top: 70px;">Implizite Semantik in EpiDoc-XML</h2>
+            <h2 style="margin-top: 70px;">Implizite Semantik (EpiDoc-XML)</h2>
             <h3 class="pull-up red">Beispiel aus dem Epidat-Corpus</h3>
             <p style="margin: -10px 0; padding: 0; line-height: 1">Link:
                 <a href="http://www.steinheim-institut.de/cgi-bin/epidat?sel=aha&amp;function=Ins&amp;jahrv=1872">
@@ -249,7 +249,7 @@
         </div>
 
         <div class="step">
-            <h2>Explizite Semantik in CIDOC-CRM</h2>
+            <h2>Explizite Semantik (CIDOC-CRM)</h2>
             <h3 class="pull-up red">Beispiel aus dem Epidat-Corpus</h3>
             <p style="margin: -10px 0; padding: 0; line-height: 1">Link:
                 <a href="http://www.steinheim-institut.de/cgi-bin/epidat?sel=aha&amp;function=Ins&amp;jahrv=1872">
@@ -293,13 +293,13 @@
                 The XTriples Webservice
             </h2>
             <h3 class="red">
-                A generic webservice to extract RDF statements from XML
+                Ein generischer Webservice zum RDF-Lifting aus XML
             </h3>
         </div>
 
         <div class="step">
             <div class="centered">
-                <h2 style="position: relative; top: 10px;">Website, Documentation &amp; Code</h2>
+                <h2 style="position: relative; top: 10px;">Website, Dokumentation &amp; Code</h2>
                 <h3 class="red">Version 1.3 (stable) | MIT License</h3>
                 <div class="row" style="position: relative; top: -20px;">
                     <div class="twelve columns">
@@ -321,31 +321,49 @@
         </div>
 
         <div class="step">
-            <h2>Basic principles of the webservice</h2>
+            <h2>Grundprinzipien des Webservice</h2>
             <ol>
-                <li class="substep"><strong>Generic:</strong> Extract RDF statements out of any XML</li>
-                <li class="substep"><strong>Simple:</strong> Slim configuration based on statement patterns</li>
-                <li class="substep"><strong>Inclusive:</strong> Harvest data from other XML resources during extraction</li>
-                <li class="substep"><strong>Flexible:</strong> Return a broad array of RDF formats</li>
-                <li class="substep"><strong>RESTful:</strong> Communicate solely over HTTP</li>
+                <li class="substep"><strong>Generisch:</strong> Nicht festgelegt auf bestimmte XML-Formate oder Schemas</li>
+                <li class="substep"><strong>Einfach:</strong> Extraktion basierend auf Aussagemustern mittels XPath/XQuery</li>
+                <li class="substep"><strong>Vernetzbar:</strong> Harvesting und Eingliederung beliebiger externer XML-Ressourcen</li>
+                <li class="substep"><strong>Flexibel:</strong> Vielzahl von RDF-Rückgabeformaten</li>
+                <li class="substep"><strong>RESTful:</strong> Transparente Schnittstellen über HTTP</li>
             </ol>
         </div>
 
         <div class="step">
-            <h2>XTriples</h2>
-            <h3 class="red pull-up">Process diagramm &amp; technical components</h3>
+            <h2>Technischer Hintergrund</h2>
+            <h3 class="red pull-up">Komponenten &amp; Datenfluß</h3>
             <div class="row">
                 <div class="twelfe columns mfp-lightbox">
                     <a href="resources/img/structure.png">
-                        <img src="resources/img/structure.png" alt="Diagram of the webservice structure" title="Diagram of the webservice structure" style="width: 75%;" />
+                        <img src="resources/img/structure.png" alt="Diagram des Webservices" title="Diagram des Webservices" style="width: 75%;" />
                     </a>
                </div>
             </div>
         </div>
 
         <div class="step">
-            <h2>Simple XML configuration</h2>
-            <h3 class="red pull-up">Based on statement patterns with XPATH / XQuery expressions</h3>
+            <h2 class="push-down">Crawler/Harvester</h2>
+            <h3 class="red pull-up">Extraktion von XML-Repositorien</h3>
+            <div class="row">
+                <div class="six columns mfp-lightbox">
+                    <a href="resources/img/xtriples-crawler.png">
+                        <img src="resources/img/xtriples-crawler.png" alt="Extraktion einer XML-Sammlung" title="Extraktion einer XML-Sammlung" style="width: 100%;" />
+                    </a>
+                </div>
+                <div class="six columns">
+<pre>
+<code class="xml">  XPATH
+</code>
+</pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>XML-Konfiguration</h2>
+            <h3 class="red pull-up">Basierend auf XPath / XQuery Aussagemustern</h3>
 <pre>
 <code class="xml small linenumbers" style="line-height: 1.5">&lt;xtriples&gt;
     &lt;configuration&gt;

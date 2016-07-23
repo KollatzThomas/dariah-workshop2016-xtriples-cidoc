@@ -1,14 +1,12 @@
-### 29.05.2016 | 1. WHiSe Workshop / ESWC 2016, Anissaras - Crete
+### 25.07.2016 | TU Darmstadt
 
-# Data Repositories in the Humanities and the Semantic Web
+# CIDOC-CRM Modellierung epigraphischer Fachdaten mit dem XTriples Webservice
 
-## Modelling, Linking, Visualising
+### Torsten Schrade
 
-### Max Grüntgens, Torsten Schrade
+Präsentation des XTriples Webservices im Rahmen des DARIAH-Expertenworkshops 
+"Geisteswissenschaftliche Forschungsinfrastrukturen und CIDOC-CRM Annotation".
 
-Presentation of the XTriples webservice at the <a href="http://whise.kmi.open.ac.uk/">1. WHiSe workshop</a> on
-Humanities in the Semantic Web.
+You can find this presentation online at http://digicademy.github.io/dariah-workshop2016-xtriples-cidoc
 
-You can find this presentation online at http://digicademy.github.io/whise2016-xtriples
-
-Released under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), Max Grüntgens and Torsten Schrade
+Released under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), [Torsten Schrade](https://orcid.org/0000-0002-0953-2818)
