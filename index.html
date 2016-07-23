@@ -97,13 +97,13 @@
             <h2>Table of Contents</h2>
             <ol>
                 <li>
-                   Epigraphische Fachdatenrepositorien
+                   Epigraphische Fachdatenrepositorien: Epidat &amp; DIO
                 </li>
                 <li>
-                   Implizite und explizite Semantik, EpiDoc und CIDOC-CRM
+                   Implizite und explizite Semantik: EpiDoc &amp; CIDOC-CRM
                 </li>
                 <li>
-                   Der XTriples Webservice
+                   Der XTriples Webservice: RDF-Lifting aus XML
                 </li>
                 <li>
                    Anwendungsbeispiel: CIDOC-CRM Extraktion des Grabsteinkorpus Ahaus
@@ -114,10 +114,10 @@
         <div class="step">
             <h1 class="red">01</h1>
             <h2 class="line-height-one-five">
-                Title
+               Epigraphische Fachdatenrepositorien
             </h2>
             <h3 class="red">
-               Byline
+                Epidat &amp; Deutsche Inschriten Online
             </h3>
         </div>
 
@@ -292,7 +292,7 @@
                 The XTriples Webservice
             </h2>
             <h3 class="red">
-                Ein generischer Webservice zum RDF-Lifting aus XML
+                RDF-Lifting aus XML
             </h3>
         </div>
 
@@ -373,15 +373,15 @@
         &lt;/vocabularies&gt;
         &lt;triples&gt;
             &lt;statement&gt;
-                &lt;<span class="subject-color">subject</span> prefix="###PREFIX###"&gt;<span class="hljs-tag">###XPATH###</span>&lt;/<span class="subject-color">subject</span>&gt;
+                &lt;<span class="subject-color">subject</span> prefix="###PREFIX###"&gt;<span class="hljs-tag"><span class="highlight-background">###XPATH###</span></span>&lt;/<span class="subject-color">subject</span>&gt;
                 &lt;<span class="predicate-color">predicate</span> prefix="rdf"&gt;<span class="hljs-tag">about</span>&lt;/<span class="predicate-color">predicate</span>&gt;
-                &lt;<span class="object-color">object</span> type="literal"&gt;<span class="hljs-tag">###XPATH###</span>&lt;/<span class="object-color">object</span>&gt;
+                &lt;<span class="object-color">object</span> type="literal"&gt;<span class="hljs-tag"><span class="highlight-background">###XPATH###</span></span>&lt;/<span class="object-color">object</span>&gt;
             &lt;/statement&gt;
             [...] &lt;!-- more statements --&gt;
         &lt;/triples&gt;
     &lt;/configuration&gt;
     &lt;collection uri="<span>http://xml.collection.somewhere/resources/index.xml</span>"&gt;
-        &lt;resources uri="<span>http://xml.collection.somewhere/resources/{###XPATH###}.xml</span>"/&gt;
+        &lt;resources uri="<span>http://xml.collection.somewhere/resources/{<span class="highlight-background">###XPATH###</span>}.xml</span>"/&gt;
     &lt;/collection&gt;
     [...] &lt;!-- more collections --&gt;
 &lt;/xtriples&gt;
@@ -397,20 +397,6 @@
             <h3 class="red">
                 CIDOC-CRM Extraktion eines Epidat-Korpus (Ahaus)
             </h3>
-        </div>
-
-        <div class="step">
-            <h2>
-                Harvesting Vorgang
-            </h2>
-            <h3 class="red">
-                Crawling der einzelnen Ressourcen über den Epidat-RSS Index
-            </h3>
-            <div class="row">
-                <div class="ten columns" style="position: relative; left: 6%;">
-                    Simple-Diagramm
-                </div>
-            </div>
         </div>
 
         <div class="step">
