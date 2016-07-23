@@ -97,16 +97,16 @@
             <h2>Table of Contents</h2>
             <ol>
                 <li>
-                   One
+                   Epigraphische Fachdatenrepositorien
                 </li>
                 <li>
-                   Two
+                   Implizite und explizite Semantik, EpiDoc und CIDOC-CRM
                 </li>
                 <li>
-                   Three
+                   Der XTriples Webservice
                 </li>
                 <li>
-                   Four
+                   Anwendungsbeispiel: CIDOC-CRM Extraktion des Grabsteinkorpus Ahaus
                 </li>
             </ol>
         </div>
@@ -258,9 +258,8 @@
             </p>
 
 <pre>
-<code class="linenumbers xml">    <span class="subject-color">&lt;aha-6&gt;</span>                <span class="predicate-color">a</span>                            <span class="object-color">E18_Physical_Thing</span> .
-                           <span class="predicate-color">P46_is_composed_of</span>           <span class="object-color">E19_Physical_Object</span> .
-    <span class="subject-color">E19_Physical_Object</span>    <span class="predicate-color">P3_has_note</span>                  <span class="object-color">"Hochrechteckige Sandsteinstele"</span> .
+<code class="linenumbers xml">    <span class="subject-color">&lt;aha-6&gt;</span>                <span class="predicate-color">a</span>                            <span class="object-color">E19_Physical_Object</span> .
+    <span class="subject-color">E19_Physical_Object</span>    <span class="predicate-color">P3_has_note</span>                  <span class="object-color">"Hochrechteckige Sandsteinstele [...]"</span> .
 
     <span class="subject-color">&lt;aha-6&gt;</span>                <span class="predicate-color">P9_consists_of</span>               <span class="object-color">E57_Material</span> .
     <span class="subject-color">E57_Material</span>           <span class="predicate-color">P3_has_note</span>                  <span class="object-color">"Stein"</span> .
@@ -347,16 +346,16 @@
             <h2 class="push-down">Crawler/Harvester</h2>
             <h3 class="red pull-up">Extraktion von XML-Repositorien</h3>
             <div class="row">
-                <div class="six columns mfp-lightbox">
-                    <a href="resources/img/xtriples-crawler.png">
-                        <img src="resources/img/xtriples-crawler.png" alt="Extraktion einer XML-Sammlung" title="Extraktion einer XML-Sammlung" style="width: 100%;" />
-                    </a>
-                </div>
-                <div class="six columns">
-<pre>
-<code class="xml">  XPATH
+                <div class="twelve columns mfp-lightbox">
+<pre style="margin-top: -5px; margin-bottom: -20px;">
+<code class="xml linenumbers">&lt;collection uri="http://steinheim-institut.de/cgi-bin/epidat?<span class="highlight-background">sel=aha</span>&amp;format=x&amp;function=changelog&amp;changesSince=0000" max="3"&gt;
+    &lt;resource uri="http://www.steinheim-institut.de/cgi-bin/epidat?id=<span class="highlight-background">{//id/text()}</span>-t"/&gt;
+&lt;/collection&gt;
 </code>
 </pre>
+                    <a href="resources/img/xtriples-crawler.png">
+                        <img src="resources/img/xtriples-crawler.png" alt="Extraktion einer XML-Sammlung" title="Extraktion einer XML-Sammlung" style="width: 45%;" />
+                    </a>
                 </div>
             </div>
         </div>
@@ -393,10 +392,10 @@
         <div class="step">
             <h1 class="red">04</h1>
             <h2 class="line-height-one-five">
-                XTriples Anwendungsfall
+                Anwendungsbeispiel
             </h2>
             <h3 class="red">
-                CIDOC-CRM Extraktion einer Epidat-Sammlung (Ahaus)
+                CIDOC-CRM Extraktion eines Epidat-Korpus (Ahaus)
             </h3>
         </div>
 
