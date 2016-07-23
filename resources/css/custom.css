@@ -1,0 +1,13 @@
+#step-1 h1 {
+	font-size: 88px;
+}
+
+code + .numbering {
+	padding-top: 10px;
+}
+
+code,
+code + ul.numbering li {
+	font-size: 16px;
+	line-height: 1.5;
+}

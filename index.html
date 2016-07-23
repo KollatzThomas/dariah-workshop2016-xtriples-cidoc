@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CIDOC-CRM Modellierung epigraphischer Fachdaten mit dem XTriples Webservice</title>
+
+    <!-- meta information -->
+    <meta name="author" content="Torsten Schrade" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- favicons -->
+    <link rel="shortcut icon" href="resources/img/favicon.png" />
+    <link rel="apple-touch-icon" href="resources/img/apple-touch-icon.png" />
+
+    <!-- CSS reset and grid -->
+    <link href="vendor/normalize/normalize-4.1.1.css" rel="stylesheet" />
+    <link href="vendor/skeleton/skeleton-2.0.4.css" rel="stylesheet" />
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,600italic,400italic,700italic,800,800italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+
+    <!-- presentation styles -->
+    <link href="resources/css/style.css" rel="stylesheet" />
+    <link href="resources/css/custom.css" rel="stylesheet" />
+
+    <!-- other libraries -->
+
+    <!-- chartist.js -->
+    <link rel="stylesheet" href="vendor/chartist/chartist.min-0.9.7.css" />
+
+    <!-- codemirror -->
+    <link rel="stylesheet" href="vendor/codemirror/lib/codemirror.css" />
+    <link rel="stylesheet" href="resources/css/codemirror-sparql.css" />
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="vendor/highlight/styles/default.css" />
+    <link rel="stylesheet" href="resources/css/hljs.linenumbering.css" />
+
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup-1.1.0.css" />
+
+    <!-- js libs that need to be in head -->
+
+    <!-- greuler -->
+    <script src="vendor/d3/d3-3.5.6.js"></script>
+    <script src="vendor/cola/cola.v3.min.js"></script>
+    <script src="vendor/greuler/greuler-0.5.5.min.js"></script>
+
+    <!-- html5 dataset shim for IE -->
+    <script src="vendor/impress/html5-dataset.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <div class="fallback-message">
+        <p>
+            Your browser <strong>doesn't support the features required</strong> by impress.mod.js,
+            so you are presented with a simplified version of this presentation.
+        </p>
+        <p>
+            For the best experience please use the latest <strong>Chrome</strong>, <strong>Safari</strong>
+            or <strong>Firefox</strong> browser.
+        </p>
+    </div>
+
+    <div id="impress">
+
+        <div class="step">
+            <h4><strong>25.07.2016 | TU Darmstadt</strong> <br/>DARIAH Expertenworkshop »Geisteswissenschaftliche Forschungsinfrastrukturen und CIDOC-CRM Annotation«</h4>
+
+            <h1>CIDOC-CRM Modellierung epigraphischer Fachdaten</h1>
+
+            <h2 class="red">Mit dem XTriples Webservice</h2>
+
+            <h5 class="byline">
+                <strong><a href="https://orcid.org/0000-0002-0953-2818">Torsten Schrade, Akademie Mainz</a></strong> |
+                <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Twitter_bird_logo_2012.svg" alt="Twitter" width="30" />
+                <a href="https://twitter.com/digicademy" title="Digital Academy on Twitter">@digicademy</a> |
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="Twitter" width="30" />
+                <a href="https://github.com/digicademy/" title="Digital Academy on GitHub">digicademy</a>
+            </h5>
+
+            <p>
+                <strong>Daten:</strong>
+                <a href="https://github.com/digicademy/dariah-workshop2016-xtriples-cidoc" title="Download the presentation">
+                    https://github.com/digicademy/dariah-workshop2016-xtriples-cidoc
+                </a> <br/>
+                <strong>Slides:</strong>
+                <a href="http://digicademy.github.io/dariah-workshop2016-xtriples-cidoc" title="View the presentation online">
+                    http://digicademy.github.io/dariah-workshop2016-xtriples-cidoc
+                </a>
+            </p>
+        </div>
+
+        <div class="step">
+            <h2>Table of Contents</h2>
+            <ol>
+                <li>
+                   One
+                </li>
+                <li>
+                   Two
+                </li>
+                <li>
+                   Three
+                </li>
+                <li>
+                   Four
+                </li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h1 class="red">01</h1>
+            <h2 class="line-height-one-five">
+                Title
+            </h2>
+            <h3 class="red">
+               Byline
+            </h3>
+        </div>
+
+        <div class="step">
+            <h2>Epigraphische Fachdaten</h2>
+            <h3 class="red pull-up">Epidat und Deutsche Inschriften Online</h3>
+            <div class="row underline push-down substep">
+                <div class="three columns">
+                    <a href="http://www.steinheim-institut.de/cgi-bin/epidat" title="Epidat - Epigraphische Datenbank">
+                        <img src="resources/img/onlineapp-epidat.png" width="100%" />
+                    </a>
+                </div>
+                <div class="nine columns">
+                    <p><strong>Epidat - Jüdische Grabsteinepigraphik</strong> (<a href="http://www.steinheim-institut.de/cgi-bin/epidat">http://www.steinheim-institut.de/cgi-bin/epidat</a>)</p>
+                    <ul class="small pull-up">
+                        <li>
+                            161 Sammlungen mit 32.367 Grabinschriften und 6.6667 Bilddigitalisaten (CC-BY 4.0)
+                        </li>
+                        <li>
+                            Maschinenlesbare Ausgabe der Datensätze als <a href="https://sourceforge.net/p/epidoc/wiki/Home/">EpiDoc-XML</a>
+                        </li>
+                        <li>
+                            <a href="http://steinheim-institut.de/daten/beacon.txt">BEACON</a> Datei für im Bestand vorkommende Personen
+                        </li>
+                        <li>
+                            <a href="http://www.steinheim-institut.de/cgi-bin/epidat?info=howtoharvest">HTTP-Schnittstelle</a> zum Harvesting der Datensätze
+                            (<a href="http://www.steinheim-institut.de/cgi-bin/epidat?sel=aha&amp;function=Ins&amp;jahrv=1872">Beispiel</a>)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row push-down substep">
+                <div class="three columns">
+                    <a href="http://www.inschriften.net" title="Deutsche Inschriften Online">
+                        <img src="resources/img/onlineapp-di.png" width="100%" />
+                    </a>
+                </div>
+                <div class="nine columns">
+                    <p><strong>Deutsche Inschriften Online</strong> (<a href="http://www.inschriften.net/">http://www.inschriften.net</a>)</p>
+                    <ul class="small pull-up">
+                        <li>
+                            17.000 Katalognummern der Edition "Die Deutschen Inschriften" mit 18.000 Bilddigitalisaten
+                        </li>
+                        <li>
+                            Die Datensätze werden gegenwärtig für die maschinenlesbare Ausgabe in EpiDoc-XML aufbereitet
+                        </li>
+                        <li>
+                            <a href="http://www.inschriften.net/rest/">REST-Interface</a> zum Harvesting der Datensätze als EpiDoc
+                            (<a href="http://www.inschriften.net/rest/di060/articles/di060-0284">Beispiel</a>)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>
+               LOD für die Epigraphik
+            </h2>
+            <h3 class="red pull-up">Semantische Verknüfungsmöglichkeiten</h3>
+            <div class="mfp-lightbox center">
+                <a href="resources/img/linking-repositories.png">
+                    <img src="resources/img/linking-repositories.png" style="width: 80%; position: relative; left: 70px;" />
+                </a>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>
+             Semantische Fragestellungen
+            </h2>
+            <h3 class="red">Mögliche Analysen mit Hilfe von Semantic Web Technologien</h3>
+            <ul>
+                <li class="substep">Welche historischen Personen existieren in allen Repositorien in welchen spezifischen Kontexten?</li>
+                <li class="substep">Welche Grabsteinsymbole (christlich/jüdisch) existieren zu welchen Zeiten in den Fachdatenkorpora?</li>
+                <li class="substep">Können bestimmte geographische Muster im Auftreten bestimmter Symbole aus den Daten geschlussfolgert werden?</li>
+                <li class="substep">Können historische Phänomene wie bspw. Hungersnöte, Überflutungen oder Seuchen durch eine repositorienübergreifende Analyse zeitlich/geographisch eingegrenzt werden?</li>
+            </ul>
+            <h5 class="substep"><strong>Die zugrunde liegende Frage aber ist: Wie erhalten wir semantisch analysierbare Daten aus EpiDoc-XML?</strong></h5>
+        </div>
+
+        <div class="step">
+            <h1 class="red">02</h1>
+            <h2 class="line-height-one-five">
+               Implizite und Explizite Semantik
+            </h2>
+            <h3 class="red">
+                EpiDoc-XML und CIDOC-CRM
+            </h3>
+        </div>
+
+        <div class="step">
+            <h2 style="margin-top: 70px;">Implizite Semantik in EpiDoc-XML</h2>
+            <h3 class="pull-up red">Beispiel aus dem Epidat-Corpus</h3>
+            <p style="margin: -10px 0; padding: 0; line-height: 1">Link:
+                <a href="http://www.steinheim-institut.de/cgi-bin/epidat?sel=aha&amp;function=Ins&amp;jahrv=1872">
+                    Grabstein des Aharon ben Awraham Halevi (1872)
+                </a>
+            </p>
+<pre>
+<code class="xml linenumbers">    &lt;<span class="subject-background">physDesc</span>&gt;
+        &lt;objectDesc&gt;
+            &lt;physDesc&gt;
+                &lt;support&gt;
+                    &lt;p&gt;<span class="subject-background">&lt;material&gt;</span><span class="object-background">Stein</span>&lt;/material&gt;<span class="object-background">Hochrechteckige Sandsteinstele</span> [...]&lt;/p&gt;
+                &lt;/support&gt;
+            [...]
+    &lt;/physDesc&gt;
+    &lt;history&gt;
+        &lt;origin&gt;
+            &lt;<span class="subject-background">date</span> <span class="predicate-background">notBefore</span>="<span class="object-background">1872-08-23</span>"&gt;1872-08-23&lt;/date&gt;
+        [...]
+    &lt;/history&gt;
+    &lt;profileDesc&gt;
+        &lt;particDesc&gt;
+            &lt;listPerson&gt;
+                &lt;<span class="object-background">person</span> xml:id="<span class="subject-background">aha-6-1</span>" <span class="predicate-background">sex</span>="<span class="object-background">1</span>"&gt;
+                    &lt;<span class="predicate-background">persName</span>&gt;<span class="object-background">Aharon ben Awraham Halevi</span>&lt;/persName&gt;
+                    &lt;event when="<span class="object-background">1872-08-23</span>" type="<span class="predicate-background">dateofdeath</span>"&gt;
+                [...]
+    &lt;/profileDesc&gt;
+</code>
+</pre>
+            <ul class="legend" style="position: relative; top: -50px;">
+                <li class="subject">Subjekt</li>
+                <li class="predicate">Prädikat</li>
+                <li class="object">Objekt</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>Explizite Semantik in CIDOC-CRM</h2>
+            <h3 class="pull-up red">Beispiel aus dem Epidat-Corpus</h3>
+            <p style="margin: -10px 0; padding: 0; line-height: 1">Link:
+                <a href="http://www.steinheim-institut.de/cgi-bin/epidat?sel=aha&amp;function=Ins&amp;jahrv=1872">
+                    Grabstein des Aharon ben Awraham Halevi (1872)
+                </a>
+            </p>
+
+<pre>
+<code class="linenumbers xml">    <span class="subject-color">&lt;aha-6&gt;</span>                <span class="predicate-color">a</span>                            <span class="object-color">E18_Physical_Thing</span> .
+                           <span class="predicate-color">P46_is_composed_of</span>           <span class="object-color">E19_Physical_Object</span> .
+    <span class="subject-color">E19_Physical_Object</span>    <span class="predicate-color">P3_has_note</span>                  <span class="object-color">"Hochrechteckige Sandsteinstele"</span> .
+
+    <span class="subject-color">&lt;aha-6&gt;</span>                <span class="predicate-color">P9_consists_of</span>               <span class="object-color">E57_Material</span> .
+    <span class="subject-color">E57_Material</span>           <span class="predicate-color">P3_has_note</span>                  <span class="object-color">"Stein"</span> .
+
+    <span class="subject-color">&lt;aha-6&gt;</span>                <span class="predicate-color">P78_is_identified_by</span>         <span class="object-color">E50_Date</span> .
+    <span class="subject-color">E50_Date</span>               <span class="predicate-color">P3_has_note</span>                  <span class="object-color">"1872-08-23"</span> .
+
+    <span class="subject-color">&lt;aha-6&gt;</span>                <span class="predicate-color">P131i_identifies</span>             <span class="object-color">E21_Person</span> .
+    <span class="subject-color">E21_Person</span>             <span class="predicate-color">P131_is_identified_by</span>        <span class="object-color">E82_Actor_Appellation</span> .
+    <span class="subject-color">E82_Actor_Appellation</span>  <span class="predicate-color">P3_has_note</span>                  <span class="object-color">"Aharon ben Awraham Halevi"</span> .
+
+    <span class="subject-color">E21_Person</span>             <span class="predicate-color">P2_has_type</span>                  <span class="object-color">E55_Type</span> .
+    <span class="subject-color">E55_Type</span>               <span class="predicate-color">P3_has_note</span>                  <span class="object-color">"male"</span> .
+
+    <span class="subject-color">E21_Person</span>             <span class="predicate-color">P100i_died_in</span>                <span class="object-color">E69_Death</span> .
+    <span class="subject-color">E69_Death</span>              <span class="predicate-color">P78_is_identified_by</span>         <span class="object-color">E50_Date</span> .
+</code>
+</pre>
+
+            <ul class="legend" style="position: relative; top: -50px;">
+                <li class="subject">Subject</li>
+                <li class="predicate">Predicate</li>
+                <li class="object">Object</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h1 class="red">03</h1>
+            <h2 class="line-height-one-five">
+                The XTriples Webservice
+            </h2>
+            <h3 class="red">
+                A generic webservice to extract RDF statements from XML
+            </h3>
+        </div>
+
+        <div class="step">
+            <div class="centered">
+                <h2 style="position: relative; top: 10px;">Website, Documentation &amp; Code</h2>
+                <h3 class="red">Version 1.3 (stable) | MIT License</h3>
+                <div class="row" style="position: relative; top: -20px;">
+                    <div class="twelve columns">
+                        <a href="http://xtriples.spatialhumanities.de" title="Go to XTriples Website" class="no-border-bottom">
+                            <img src="resources/img/screenshots_xtriples_01.png" class="no-underline" alt="Screenshot" title="Website of the service" style="width: 65%;" />
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="twelve columns" style="position: relative; top: -35px;">
+                        <h5>
+                            <strong>Demo:</strong> <a href="http://xtriples.spatialhumanities.de" title="Go to XTriples Website">
+                            http://xtriples.spatialhumanities.de
+                        </a> <br/> <strong>Code: </strong> <a href="https://github.com/spatialhumanities/xtriples">https://github.com/spatialhumanities/xtriples</a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Basic principles of the webservice</h2>
+            <ol>
+                <li class="substep"><strong>Generic:</strong> Extract RDF statements out of any XML</li>
+                <li class="substep"><strong>Simple:</strong> Slim configuration based on statement patterns</li>
+                <li class="substep"><strong>Inclusive:</strong> Harvest data from other XML resources during extraction</li>
+                <li class="substep"><strong>Flexible:</strong> Return a broad array of RDF formats</li>
+                <li class="substep"><strong>RESTful:</strong> Communicate solely over HTTP</li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h2>XTriples</h2>
+            <h3 class="red pull-up">Process diagramm &amp; technical components</h3>
+            <div class="row">
+                <div class="twelfe columns mfp-lightbox">
+                    <a href="resources/img/structure.png">
+                        <img src="resources/img/structure.png" alt="Diagram of the webservice structure" title="Diagram of the webservice structure" style="width: 75%;" />
+                    </a>
+               </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Simple XML configuration</h2>
+            <h3 class="red pull-up">Based on statement patterns with XPATH / XQuery expressions</h3>
+<pre>
+<code class="xml small linenumbers" style="line-height: 1.5">&lt;xtriples&gt;
+    &lt;configuration&gt;
+        &lt;vocabularies&gt;
+            &lt;vocabulary prefix="###PREFIX###" uri="###NAMESPACE###"/&gt;
+            &lt;vocabulary prefix="rdf" uri="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/&gt;
+            [...] &lt;!-- more vocabularies --&gt;
+        &lt;/vocabularies&gt;
+        &lt;triples&gt;
+            &lt;statement&gt;
+                &lt;<span class="subject-color">subject</span> prefix="###PREFIX###"&gt;<span class="hljs-tag">###XPATH###</span>&lt;/<span class="subject-color">subject</span>&gt;
+                &lt;<span class="predicate-color">predicate</span> prefix="rdf"&gt;<span class="hljs-tag">about</span>&lt;/<span class="predicate-color">predicate</span>&gt;
+                &lt;<span class="object-color">object</span> type="literal"&gt;<span class="hljs-tag">###XPATH###</span>&lt;/<span class="object-color">object</span>&gt;
+            &lt;/statement&gt;
+            [...] &lt;!-- more statements --&gt;
+        &lt;/triples&gt;
+    &lt;/configuration&gt;
+    &lt;collection uri="<span>http://xml.collection.somewhere/resources/index.xml</span>"&gt;
+        &lt;resources uri="<span>http://xml.collection.somewhere/resources/{###XPATH###}.xml</span>"/&gt;
+    &lt;/collection&gt;
+    [...] &lt;!-- more collections --&gt;
+&lt;/xtriples&gt;
+</code>
+</pre>
+        </div>
+
+        <div class="step">
+            <h1 class="red">04</h1>
+            <h2 class="line-height-one-five">
+                XTriples Anwendungsfall
+            </h2>
+            <h3 class="red">
+                CIDOC-CRM Extraktion einer Epidat-Sammlung (Ahaus)
+            </h3>
+        </div>
+
+        <div class="step">
+            <h2>
+                Harvesting Vorgang
+            </h2>
+            <h3 class="red">
+                Crawling der einzelnen Ressourcen über den Epidat-RSS Index
+            </h3>
+            <div class="row">
+                <div class="ten columns" style="position: relative; left: 6%;">
+                    Simple-Diagramm
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="centered">
+                <h1 class="red">F I N I S</h1>
+                <h2 class="pull-up">Thank you</h2>
+                <p><a href="#/step-31">Links, Software &amp; Attribution</a></p>
+            </div>
+        </div>
+
+        <div class="step">
+
+            <h2>Links, Software &amp; Attribution</h2>
+
+            <h4>Links</h4>
+
+            <ul class="small pull-up">
+                <li>
+                    XTriples:
+                    <a href="http://xtriples.spatialhumanities.de/">
+                        http://xtriples.spatialhumanities.de/
+                    </a>
+                </li>
+                <li>
+                    Apache any23:
+                    <a href="https://any23.apache.org/">
+                        https://any23.apache.org/
+                    </a>
+                </li>
+                <li>
+                    Redefer rdf2svg:
+                    <a href="http://rhizomik.net/html/redefer/rdf2svg-form/">
+                        http://rhizomik.net/html/redefer/rdf2svg-form/
+                    </a>
+                </li>
+                <li>
+                    eXist XML database:
+                    <a href="http://exist-db.org/">
+                        http://exist-db.org/
+                    </a>
+                </li>
+            </ul>
+
+            <h4>Software used</h4>
+
+            <ul class="small pull-up">
+                <li>
+                    <a href="https://github.com/impress/impress.js">Impress.js</a> (Presentation)
+                </li>
+                <li>
+                    <a href="https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans">Open Sans</a> (Google Font)
+                </li>
+                <li>
+                    <a href="https://github.com/dimsemenov/Magnific-Popup">Magnific Popup</a> (Lightbox)
+                </li>
+                <li>
+                    <a href="http://maurizzzio.github.io/greuler/#/">greuler</a> (Graph Modelling)
+                </li>
+                <li>
+                    <a href="https://highlightjs.org/">hightlight.js</a> (Syntax Highlighting)
+                </li>
+            </ul>
+
+            <h4>Attribution</h4>
+            <ul class="small pull-up">
+                <li>
+                    Link to this presentation:
+                    <a href="http://digicademy.github.io/dariah-workshop2016-xtriples-cidoc/">
+                        http://digicademy.github.io/dariah-workshop2016-xtriples-cidoc/
+                    </a>
+                </li>
+                <li>
+                    License: <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>, Torsten Schrade
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- jquery -->
+    <script src="vendor/jquery/jquery-1.11.0.min.js"></script>
+
+    <!-- chartist -->
+    <script src="vendor/chartist/chartist.min-0.9.7.js"></script>
+
+    <!-- codemirror -->
+    <script src="vendor/codemirror/lib/codemirror.js"></script>
+    <script src="vendor/codemirror/mode/sparql/sparql.js"></script>
+
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack-9.3.0.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="resources/js/hljs.linenumbering.js"></script>
+
+    <!-- magnific popup -->
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min-1.1.0.js"></script>
+    <script src="resources/js/magnific-popup.lightbox.js"></script>
+
+    <!-- sgvizler -->
+    <script src="vendor/sgvizler/sgvizler.fork.js"></script>
+
+    <!-- impress.mod.js -->
+    <script src="vendor/impress/impress.fork.js"></script>
+    <script src="vendor/impress/impress-slidenum.js"></script>
+    <script>
+        var obj = impress();
+        obj.init();
+        initSlideNo(obj);
+    </script>
+
+</body>
+</html>

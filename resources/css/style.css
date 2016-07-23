@@ -1,0 +1,551 @@
+/*
+#########################################################
+IMPRESS.JS BASIC STYLES
+#########################################################
+*/
+
+html {
+	overflow: hidden;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 40px;
+	font-size: 32px;
+	min-height: 740px;
+	pointer-events: none;	/* Disables click events in body */
+}
+
+.step {
+	width: 1060px;
+	padding: 0 0 40px 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-o-box-sizing: border-box;
+	box-sizing: border-box;
+		-webkit-transition: opacity 1s;
+		-moz-transition: opacity 1s;
+		-ms-transition: opacity 1s;
+		-o-transition: opacity 1s;
+	transition: opacity 1s;
+}
+
+.impress-enabled .step {
+	margin: 0;
+	opacity: 0.3;
+		-webkit-transition: opacity 1s;
+		-moz-transition: opacity 1s;
+		-ms-transition: opacity 1s;
+		-o-transition: opacity 1s;
+	transition: opacity 1s;
+}
+
+.step:not(.active),
+.substep:not(.active) {
+	opacity: 0.0;
+}
+
+.impress-enabled .step.active,
+.impress-enabled .substep.active {
+	opacity: 1;
+}
+
+/* FALLBACK MESSAGE */
+
+.fallback-message {
+	font-family: sans-serif;
+	line-height: 1.3;
+	width: 780px;
+	padding: 10px 10px 0;
+	margin: 20px auto;
+	border: 1px solid #E4C652;
+	border-radius: 10px;
+	background: #EEDC94;
+}
+
+.fallback-message p {
+	margin-bottom: 10px;
+}
+
+.impress-supported .fallback-message {
+	display: none;
+}
+
+/* SLIDE NUMBERS */
+
+#slide-div {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	padding: 10px 2px;
+	margin-left: 0;
+	margin-top: 0;
+	height: 10px;
+	width: 80px;
+}
+
+#slide-text {
+	bottom: 0px;
+	font-size: 12px;
+	text-align: center;
+	color: #C0C0C0;
+}
+
+.slide-div-1 {
+	display: none;
+}
+
+/* SCALING, POSITIONING, POINTER EVENTS FOR CURRENT SLIDE */
+
+.present .positioning {
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	-ms-transform: translateY(-10px);
+	-o-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.present .rotating {
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+	-ms-transform: rotate(-10deg);
+	-o-transform: rotate(-10deg);
+	transform: rotate(-10deg);
+	-webkit-transition-delay: 0.25s;
+	-moz-transition-delay: 0.25s;
+	-ms-transition-delay: 0.25s;
+	-o-transition-delay: 0.25s;
+	transition-delay: 0.25s;
+}
+
+.present .scaling {
+	-webkit-transform: scale(0.7);
+	-moz-transform: scale(0.7);
+	-ms-transform: scale(0.7);
+	-o-transform: scale(0.7);
+	transform: scale(0.7);
+	-webkit-transition-delay: 0.5s;
+	-moz-transition-delay: 0.5s;
+	-ms-transition-delay: 0.5s;
+	-o-transition-delay: 0.5s;
+	transition-delay: 0.5s;
+}
+
+/* ENABLE POINTER EVENTS ON SPECIAL ELEMENTS */
+
+.present a,
+.present a:hover,
+.present svg,
+.present svg:hover,
+.present object,
+.present object:hover,
+.present iframe,
+.present iframe:hover,
+.present .ct-container,
+.present .ct-container:hover,
+.present .hljs,
+button.mfp-close {
+	pointer-events: auto;
+}
+
+/*
+#########################################################
+BASIC TYPOGRAPHY
+#########################################################
+*/
+
+h1, h2 {
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 100px;
+	margin: 20px 0;
+	line-height: 110px;
+}
+
+h2 {
+	font-size: 48px;
+	font-weight: 300;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	line-height: 1.1;
+	margin: 10px 0;
+}
+
+blockquote {
+	font-weight: 300;
+	font-style: italic;
+	line-height: 1.4;
+	margin: 20px 0 30px 0;
+	padding: 10px 0;
+	border-top: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+}
+
+table {
+	width: 100%;
+}
+
+td, th {
+	vertical-align: top;
+	line-height: 44px;
+}
+
+code {
+	font-size: 36px;
+	line-height: 36px;
+}
+
+a {
+	pointer-events: none;
+	text-decoration: none;
+	color: #1e88e5;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+	font-weight: bold;
+}
+
+a:link, a:hover, a:focus, a:visited {
+	color: #1e88e5;
+}
+
+a:hover {
+	border-bottom: 2px solid #1e88e5;
+}
+
+.no-border-bottom:hover,
+.mfp-lightbox a:hover {
+	border: none;
+}
+
+p {
+	font-size: 16px;
+	line-height: 2;
+}
+
+ol {
+	margin: 20px 0 20px 70px;
+}
+
+ul {
+	counter-reset: section;
+	margin: 20px 0 20px 50px;
+}
+
+li {
+	position: relative;
+	list-style-type: none;
+	counter-increment: section;
+	font-size: 26px;
+	line-height: 36px;
+}
+
+li:before {
+	position: absolute;
+	left: -35px;
+	top: 4px;
+	line-height: 1;
+	color: #C00000;
+}
+
+ul li:before {
+	left: -25px;
+	font-size: 20px;
+	content: "▸"
+}
+
+ol li:before {
+	content: counters(section,".")". ";
+}
+
+span, strong {
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+	display: inline-block;
+}
+
+strong {
+	font-weight: 800;
+}
+
+em {
+	font-style: italic;
+}
+
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+/*
+#########################################################
+CLASSES FOR SPECIAL LAYOUT/TYPOGRAPHY
+#########################################################
+*/
+
+.centered {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.justify {
+	text-align: justify;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+}
+
+.medium, .medium li {
+	font-size: 20px;
+}
+
+.medium li:before {
+	top: 3px;
+}
+
+.medium li {
+	line-height: 1.4;
+}
+
+.small {
+	font-size: 16px;
+}
+
+.small li {
+	font-size: 18px;
+	line-height: 1.3;
+}
+
+.small li:before {
+	top: 0;
+}
+
+.skip {
+	display: none;
+}
+
+.byline {
+	margin-top: 1em;
+	font-size: 30px;
+}
+
+.underline {
+	border-bottom: 1px dotted;
+}
+
+.dotted {
+	border: 1px dotted #333;
+}
+
+.red {
+	color: #C00000;
+}
+
+.teaser {
+	min-height: 134px;
+}
+
+.outline {
+	outline: 1px solid #333;
+}
+
+.light {
+	font-weight: 300;
+	letter-spacing: .1em;
+}
+
+.pull-up {
+	margin-top: -10px;
+}
+
+.push-down {
+	margin-top: 10px;
+}
+
+.even-left {
+	margin-left: 0;
+}
+
+.even-right {
+	margin-right: 0;
+}
+
+.line-height-one {
+	line-height: 1;
+}
+
+.line-height-one-five {
+	line-height: 1.5;
+}
+
+.line-height-two {
+	line-height: 1.5;
+}
+
+.no-margins {
+	margin: 0;
+}
+
+.highlight {
+	background: #F6E900;
+}
+
+/*
+#########################################################
+STYLES FOR INCLUDED LIBRARIES
+#########################################################
+*/
+
+/* HIGHLIGHT.JS */
+
+pre code {
+	background-color: inherit;
+	padding: 0 2em;
+}
+
+code {
+	font-family: monospace;
+	font-size: 24px;
+	line-height: 30px;
+}
+
+/* GREULER */
+
+text {
+	font-size: 13px;
+}
+
+.outer-top-right {
+	font-size: 11px;
+	fill: #000;
+}
+
+#greuler-n836af52d06d5e8 text,
+#greuler-k6c1b87b6d8371 text,
+#greuler-xe3065f1bc60cc text {
+	fill: #E74C3C;
+}
+
+.steps, .legend {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+
+.steps li {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.steps li:before {
+	content: "";
+}
+
+.steps a {
+	border: 1px solid #000;
+	/*	border-radius: 50%; */
+	display: inline-block;
+	height: 1.3em;
+	line-height: 1.3em;
+	margin: 0;
+	text-align: center;
+	width: 1.3em;
+	text-shadow: none;
+	text-decoration: none;
+	color: #000;
+}
+
+.steps a:hover, .steps .current {
+	background: #000;
+	color: #FFF;
+}
+
+.legend {
+	text-align: right;
+}
+
+.legend li {
+	display: inline-block;
+	font-size: 22px;
+	margin-right: 1em;
+}
+
+.legend li:before {
+	position: relative;
+	content:"\25A0";
+	padding: 0 0.3em 0;
+	margin: 0;
+	top: 0;
+	left: 0;
+	font-size: 1.6em;
+	line-height: 1;
+}
+
+#gnd:before {
+	color: #2980B9;
+}
+
+#cs:before {
+	color: #F44336;
+}
+
+#geonames:before {
+	color: #4CAF50
+}
+
+/* SPARQL color classes */
+
+.subject-background {
+	background: #81d4fa;
+}
+
+.predicate-background {
+	background: #ff8a65;
+}
+
+.object-background {
+	background: #a5d6a7;
+}
+
+.subject-color, .subject:before {
+	color: #0277bd;
+}
+
+.predicate-color, .predicate:before {
+	color: #ff6d00;
+}
+
+.object-color, .object:before {
+	color: #2e7d32;
+}
+
+.highlight-background {
+	background: #ffff00;
+}
+
+.hljs-tag:hover {
+	background: #F6E900;
+}
