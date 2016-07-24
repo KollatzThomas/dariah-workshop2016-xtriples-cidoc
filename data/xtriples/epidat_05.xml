@@ -1,0 +1,134 @@
+<?xml-model uri="http://xtriples.spatialhumanities.de/xtriples.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<xtriples>
+	<configuration>
+		<vocabularies>
+			<vocabulary prefix="epidat" uri="http://www.steinheim-institut.de/cgi-bin/epidat?id="/>
+			<vocabulary prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
+			<vocabulary prefix="rdf" uri="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+			<vocabulary prefix="rdfs" uri="http://www.w3.org/2000/01/rdf-schema#"/>
+			<vocabulary prefix="dc" uri="http://purl.org/dc/elements/1.1/"/>
+			<vocabulary prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
+			<vocabulary prefix="owltime" uri="http://www.w3.org/2006/time#"/>
+			<vocabulary prefix="geo" uri="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+			<vocabulary prefix="tgn" uri="http://vocab.getty.edu/tgn/"/>
+			<vocabulary prefix="skos" uri="http://www.w3.org/2004/02/skos/core#"/>
+			<vocabulary prefix="foaf" uri="http://xmlns.com/foaf/0.1/"/>
+			<vocabulary prefix="bio" uri="http://purl.org/vocab/bio/0.1/"/>
+			<vocabulary prefix="crm" uri="http://erlangen-crm.org/160331/"/>
+		</vocabularies>
+		<triples>
+
+			<!-- a physical object -->
+			<statement>
+				<subject prefix="epidat">//tei:idno[@type='epidat']</subject>
+				<predicate prefix="rdf">type</predicate>
+				<object prefix="crm" type="uri">E19_Physical_Object</object>
+			</statement>
+			<statement>
+				<subject prefix="epidat">//tei:idno[@type='epidat']</subject>
+				<predicate prefix="crm">P3_has_note</predicate>
+				<object type="literal" lang="de">//tei:support/tei:p/text()[last()]</object>
+			</statement>
+
+			<!-- material -->
+			<statement>
+				<condition>/exists(.//tei:material)</condition>
+				<subject prefix="epidat">//tei:idno[@type='epidat']</subject>
+				<predicate prefix="crm">P9_consists_of</predicate>
+				<object type="bnode">/concat("E57_Material-", .//tei:idno[@type='epidat'])</object>
+			</statement>
+			<statement>
+				<condition>/exists(.//tei:material)</condition>
+				<subject type="bnode">/concat("E57_Material-", .//tei:idno[@type='epidat'])</subject>
+				<predicate prefix="rdf">type</predicate>
+				<object prefix="crm" type="uri">E57_Material</object>
+			</statement>
+			<statement>
+				<condition>/exists(.//tei:material)</condition>
+				<subject type="bnode">/concat("E57_Material-", .//tei:idno[@type='epidat'])</subject>
+				<predicate prefix="crm">P3_has_note</predicate>
+				<object type="literal" lang="de">//tei:material</object>
+			</statement>
+
+			<!-- date -->
+			<statement>
+				<condition>/exists(.//tei:history/tei:origin/tei:date)</condition>
+				<subject prefix="epidat">//tei:idno[@type='epidat']</subject>
+				<predicate prefix="crm">P78_is_identified_by</predicate>
+				<object type="bnode">/concat("E50_Date-", .//tei:idno[@type='epidat'])</object>
+			</statement>
+			<statement>
+				<condition>/exists(.//tei:history/tei:origin/tei:date)</condition>
+				<subject type="bnode">/concat("E50_Date-", .//tei:idno[@type='epidat'])</subject>
+				<predicate prefix="rdf">type</predicate>
+				<object prefix="crm" type="uri">E50_Date</object>
+			</statement>
+			<statement>
+				<condition>/exists(.//tei:history/tei:origin/tei:date)</condition>
+				<subject type="bnode">/concat("E50_Date-", .//tei:idno[@type='epidat'])</subject>
+				<predicate prefix="crm">P3_has_note</predicate>
+				<object type="literal" datatype="date">//tei:history/tei:origin/tei:date</object>
+			</statement>
+
+			<!-- person -->
+			<statement repeat="{/count(.//tei:person)}">
+				<subject prefix="epidat">//tei:idno[@type='epidat']</subject>
+				<predicate prefix="crm">P131i_identifies</predicate>
+				<object type="bnode">/concat("E21_Person-", .//tei:person[$repeatIndex]/@xml:id)</object>
+			</statement>
+			<statement repeat="{/count(.//tei:person)}">
+				<subject type="bnode">/concat("E21_Person-", .//tei:person[$repeatIndex]/@xml:id)</subject>
+				<predicate prefix="rdf">type</predicate>
+				<object prefix="crm" type="uri">E21_Person</object>
+			</statement>
+			<statement repeat="{/count(.//tei:person)}">
+				<subject type="bnode">/concat("E21_Person-", .//tei:person[$repeatIndex]/@xml:id)</subject>
+				<predicate prefix="rdf">P131_is_identified_by</predicate>
+				<object type="bnode">/concat("E82_Actor_Appellation-", .//tei:person[$repeatIndex]/@xml:id)</object>
+			</statement>
+			<statement repeat="{/count(.//tei:person)}">
+				<subject type="bnode">/concat("E82_Actor_Appellation-", .//tei:person[$repeatIndex]/@xml:id)</subject>
+				<predicate prefix="rdf">type</predicate>
+				<object prefix="crm" type="uri">E82_Actor_Appellation</object>
+			</statement>
+			<statement repeat="{/count(.//tei:person)}">
+				<subject type="bnode">/concat("E82_Actor_Appellation-", .//tei:person[$repeatIndex]/@xml:id)</subject>
+				<predicate prefix="rdf">P3_has_note</predicate>
+				<object type="literal" lang="de">//tei:person[$repeatIndex]/tei:persName</object>
+			</statement>
+
+			<!-- gender -->
+			<statement repeat="{/count(.//tei:person)}">
+				<subject type="bnode">/concat("E21_Person-", .//tei:person[$repeatIndex]/@xml:id)</subject>
+				<predicate prefix="crm">P2_has_type</predicate>
+				<object type="bnode">/concat("E55_Type-", .//tei:person[$repeatIndex]/@xml:id)</object>
+			</statement>
+			<statement repeat="{/count(.//tei:person)}">
+				<subject type="bnode">/concat("E55_Type-", .//tei:person[$repeatIndex]/@xml:id)</subject>
+				<predicate prefix="rdf">type</predicate>
+				<object prefix="crm" type="uri">E55_Type</object>
+			</statement>
+			<statement repeat="{/count(.//tei:person)}">
+				<condition>/exists(.//tei:person[$repeatIndex and @sex = '1'])</condition>
+				<subject type="bnode">/concat("E55_Type-", .//tei:person[$repeatIndex]/@xml:id)</subject>
+				<predicate prefix="crm">P3_has_note</predicate>
+				<object type="literal" lang="de">Mann</object>
+			</statement>
+			<statement repeat="{/count(.//tei:person)}">
+				<condition>/exists(.//tei:person[$repeatIndex and @sex = '2'])</condition>
+				<subject type="bnode">/concat("E55_Type-", .//tei:person[$repeatIndex]/@xml:id)</subject>
+				<predicate prefix="crm">P3_has_note</predicate>
+				<object type="literal" lang="de">Frau</object>
+			</statement>
+
+		</triples>
+	</configuration>
+	<!--
+	<collection uri="http://steinheim-institut.de/cgi-bin/epidat?sel=aha&amp;format=x&amp;function=changelog&amp;changesSince=0000">
+		<resource uri="http://www.steinheim-institut.de/cgi-bin/epidat?id={//id/text()}-t"/>
+	</collection>
+	-->
+	<collection>
+		<resource uri="http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13-t"/>
+	</collection>
+</xtriples>
