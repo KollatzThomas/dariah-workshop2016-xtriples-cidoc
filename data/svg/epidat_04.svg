@@ -90,7 +90,7 @@
             <title>A1-&gt;"Elieser ben Josef Hakohen"</title>
 <path style="fill:none;stroke:blue;" d="M970,-100C998,-100 1031,-101 1060,-101"/>
 <polygon style="fill:blue;stroke:blue;" points="1060,-104.5 1070,-101 1060,-97.5001 1060,-104.5"/>
-<text text-anchor="middle" x="1020" y="-103.5" style="font-family:Times New Roman;font-size:10.00px;">rdf:P3_has_note</text>
+<text text-anchor="middle" x="1020" y="-103.5" style="font-family:Times New Roman;font-size:10.00px;">crm:P3_has_note</text>
 </g>
 <!-- &quot;Jehuda&quot; -->
 <g id="node12" class="node">
@@ -102,7 +102,7 @@
             <title>A0-&gt;"Jehuda"</title>
 <path style="fill:none;stroke:blue;" d="M970,-44C1015,-43 1070,-43 1106,-43"/>
 <polygon style="fill:blue;stroke:blue;" points="1106,-46.5001 1116,-43 1106,-39.5001 1106,-46.5001"/>
-<text text-anchor="middle" x="1020" y="-46.5" style="font-family:Times New Roman;font-size:10.00px;">rdf:P3_has_note</text>
+<text text-anchor="middle" x="1020" y="-46.5" style="font-family:Times New Roman;font-size:10.00px;">crm:P3_has_note</text>
 </g>
 </g>
 </svg>

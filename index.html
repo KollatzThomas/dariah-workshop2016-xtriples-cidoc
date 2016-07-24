@@ -214,6 +214,18 @@
         </div>
 
         <div class="step">
+            <h2 class="push-down">
+                EpiDoc ≠ EpiDoc
+            </h2>
+            <h3 class="pull-up red">3 Repositorien, 3 Varianten</h3>
+            <div class="mfp-lightbox">
+                <a href="resources/img/epidoc.png" title="" class="no-border-bottom">
+                    <img src="resources/img/epidoc.png" class="dotted no-underline" alt="Screenshot" title="EpiDoc Varianten" style="width: 95%;" />
+                </a>
+            </div>
+        </div>
+
+        <div class="step">
             <h2 style="margin-top: 70px;">Implizite Semantik (EpiDoc-XML)</h2>
             <h3 class="pull-up red">Beispiel aus dem Epidat-Corpus</h3>
             <p style="margin: -10px 0; padding: 0; line-height: 1">Link:
@@ -771,7 +783,7 @@
                         <title>A1-&gt;"Elieser ben Josef Hakohen"</title>
                         <path style="fill:none;stroke:blue;" d="M970,-100C998,-100 1031,-101 1060,-101"/>
                         <polygon style="fill:blue;stroke:blue;" points="1060,-104.5 1070,-101 1060,-97.5001 1060,-104.5"/>
-                        <text text-anchor="middle" x="1020" y="-103.5" style="font-family:Times New Roman;font-size:10.00px;">rdf:P3_has_note</text>
+                        <text text-anchor="middle" x="1020" y="-103.5" style="font-family:Times New Roman;font-size:10.00px;">crm:P3_has_note</text>
                     </g>
                     <!-- &quot;Jehuda&quot; -->
                     <g id="node12" class="node">
@@ -783,7 +795,7 @@
                         <title>A0-&gt;"Jehuda"</title>
                         <path style="fill:none;stroke:blue;" d="M970,-44C1015,-43 1070,-43 1106,-43"/>
                         <polygon style="fill:blue;stroke:blue;" points="1106,-46.5001 1116,-43 1106,-39.5001 1106,-46.5001"/>
-                        <text text-anchor="middle" x="1020" y="-46.5" style="font-family:Times New Roman;font-size:10.00px;">rdf:P3_has_note</text>
+                        <text text-anchor="middle" x="1020" y="-46.5" style="font-family:Times New Roman;font-size:10.00px;">crm:P3_has_note</text>
                     </g>
                 </g>
             </svg>
@@ -810,7 +822,7 @@
 &lt;/statement&gt;
 &lt;statement repeat="{/count(.//tei:person)}"&gt;
     &lt;subject type="bnode"&gt;/concat("E82_Actor_Appellation-", .//tei:person[<span class="highlight-background">$repeatIndex</span>]/@xml:id)&lt;/subject&gt;
-    &lt;predicate prefix="rdf"&gt;P3_has_note&lt;/predicate&gt;
+    &lt;predicate prefix="crm"&gt;P3_has_note&lt;/predicate&gt;
     &lt;object type="literal" lang="de"&gt;//tei:person[<span class="highlight-background">$repeatIndex</span>]/tei:persName&lt;/object&gt;
 &lt;/statement&gt;
 </code>
@@ -903,7 +915,7 @@
                         <title>A5-&gt;"Jehuda"</title>
                         <path style="fill:none;stroke:blue;" d="M970,-211C1017,-211 1074,-211 1112,-211"/>
                         <polygon style="fill:blue;stroke:blue;" points="1112,-214.5 1122,-211 1112,-207.5 1112,-214.5"/>
-                        <text text-anchor="middle" x="1023" y="-214.5" style="font-family:Times New Roman;font-size:10.00px;">rdf:P3_has_note</text>
+                        <text text-anchor="middle" x="1023" y="-214.5" style="font-family:Times New Roman;font-size:10.00px;">crm:P3_has_note</text>
                     </g>
                     <!-- http://www.steinheim&#45;institut.de/cgi&#45;bin/epidat?id=aha&#45;13 -->
                     <g id="node9" class="node">
@@ -979,7 +991,7 @@
                         <title>A2-&gt;"Elieser ben Josef Hakohen"</title>
                         <path style="fill:none;stroke:blue;" d="M970,-43C1000,-43 1035,-43 1066,-43"/>
                         <polygon style="fill:blue;stroke:blue;" points="1066,-46.5001 1076,-43 1066,-39.5001 1066,-46.5001"/>
-                        <text text-anchor="middle" x="1023" y="-46.5" style="font-family:Times New Roman;font-size:10.00px;">rdf:P3_has_note</text>
+                        <text text-anchor="middle" x="1023" y="-46.5" style="font-family:Times New Roman;font-size:10.00px;">crm:P3_has_note</text>
                     </g>
                 </g>
             </svg>
@@ -1181,7 +1193,7 @@
                         <title>A0-&gt;"Elieser ben Josef Hakohen"</title>
                         <path style="fill:none;stroke:blue;" d="M1026,-322C1089,-320 1177,-316 1242,-314"/>
                         <polygon style="fill:blue;stroke:blue;" points="1242,-317.5 1252,-314 1242,-310.5 1242,-317.5"/>
-                        <text text-anchor="middle" x="1128" y="-322.5" style="font-family:Times New Roman;font-size:10.00px;">rdf:P3_has_note</text>
+                        <text text-anchor="middle" x="1128" y="-322.5" style="font-family:Times New Roman;font-size:10.00px;">crm:P3_has_note</text>
                     </g>
                     <!-- A11 -->
                     <g id="node20" class="node">
@@ -1200,7 +1212,7 @@
                         <title>A11-&gt;"Jehuda"</title>
                         <path style="fill:none;stroke:blue;" d="M1026,-156C1104,-156 1226,-157 1288,-157"/>
                         <polygon style="fill:blue;stroke:blue;" points="1288,-160.5 1298,-157 1288,-153.5 1288,-160.5"/>
-                        <text text-anchor="middle" x="1128" y="-159.5" style="font-family:Times New Roman;font-size:10.00px;">rdf:P3_has_note</text>
+                        <text text-anchor="middle" x="1128" y="-159.5" style="font-family:Times New Roman;font-size:10.00px;">crm:P3_has_note</text>
                     </g>
                     <!-- A12 -->
                     <g id="node23" class="node">
@@ -1398,32 +1410,85 @@
                 Gesamtergebnis
             </h2>
             <h3 class="red">XTriples-Extraktion des Grabsteinkorpus Ahaus</h3>
-            <p>Statistiken</p>
+            <div class="row">
+                <div class="six columns">
+                    <h4>Statistik</h4>
+                    <p style="margin-bottom: -10px;"><strong>Extrahierte Triple insgesamt:</strong> 1468</p>
+                    <table class="small">
+                        <thead>
+                            <tr>
+                                <th>Klassen</th>
+                                <th>Instanzen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>E19_Physical_Object / <a href="data/sparql/E19_Physical_Object.rq">SPARQL</a></td>
+                                <td>57</td>
+                            </tr>
+                            <tr>
+                                <td>E57_Material / <a href="data/sparql/E57_Material.rq">SPARQL</a></td>
+                                <td>57 ( x "Stein")</td>
+                            </tr>
+                            <tr>
+                                <td>E21_Person / <a href="data/sparql/E21_Person.rq">SPARQL</a></td>
+                                <td>52</td>
+                            </tr>
+                            <tr>
+                                <td>E55_Type / <a href="data/sparql/E55_Type.rq">SPARQL</a></td>
+                                <td>28 Männer / 24 Frauen</td>
+                            </tr>
+                            <tr>
+                                <td>E69_Death / <a href="data/sparql/E69_Death.rq">SPARQL</a></td>
+                                <td>52</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="six columns">
+                    <h4>Vollständige Extraktion als Graph</h4>
+                    <a href="resources/img/epidat-aha-graph.png" title="" class="no-border-bottom">
+                        <img src="resources/img/epidat-aha-graph.png" class="dotted no-underline" alt="Screenshot" title="Result as visual RDF graph" style="width: 100%;" />
+                    </a>
+                    <p>
+                        <strong>Daten aufrufen:</strong>
+                        <a href="http://digicademy.github.io/dariah-workshop2016-xtriples-cidoc/data/svg/epidat_aha.rdf">RDF/XML</a> |
+                        <a href="http://digicademy.github.io/dariah-workshop2016-xtriples-cidoc/data/svg/epidat_aha.svg">SVG</a> |
+                        <a href="https://graves.cl/visualRDF/?url=https%3A%2F%2Fdigicademy.github.io%2Fdariah-workshop2016-xtriples-cidoc%2Fdata%2Frdf%2Fepidat_aha.rdf">Graph</a>
+                    </p>
+                </div>
+            </div>
         </div>
 
         <div class="step">
             <h2>
-                Analysemöglichkeiten
+                Weitere Analysemöglichkeiten
             </h2>
-            <h3 class="red">Familienbeziehungen in Ahaus / Jüdische Grabsteinsymbole</h3>
+            <h3 class="red">Familienbeziehungen auf dem Friedhof Ahaus</h3>
+            <a href="http://dhd2016.digitale-akademie.de/workshop/tools/sgvizler/graph_aha-family-relations.html" title="" class="no-border-bottom">
+                <img src="resources/img/epidat-aha-relations.png" class="dotted no-underline" alt="Screenshot" title="Familienbeziehungen auf dem Friedhof in Ahaus" style="width: 100%;" />
+            </a>
+            <h4><a href="http://dhd2016.digitale-akademie.de/workshop/tools/sgvizler/graph_aha-family-relations.html">Visualisierung</a> aus dem <a href="http://dhd2016.digitale-akademie.de/workshop/">DARIAH Workshop</a> auf der <a href="http://dhd2016.de/">DHd2016</a></h4>
         </div>
 
         <div class="step">
             <h2>
-                Fazit
+                Ausblick
             </h2>
-            <h3 class="red">Byline</h3>
+            <h3 class="red">Weitere Schritte im UseCase 6.1</h3>
             <ul>
-                <li class="substep">Eins</li>
-                <li class="substep">Zwei</li>
-                <li class="substep">Drei</li>
+                <li class="substep">Ausmodellierung und Extraktion der verbleibenden CIDOC-Bezüge für Epidat</li>
+                <li class="substep">CIDOC-Extraktion des gesamten Epidat-Datenbestandes</li>
+                <li class="substep">CIDOC-Modellierung für Deutsche Inschriften Online, Öffnung der Daten als EpiDoc und CIDOC-Extraktion</li>
+                <li class="substep">Analyse und Visualisierung des zusammengeführten CIDOC-Datenbestandes mit SPARQL und verschiedenen Visualisierungsbibliotheken</li>
+                <li class="substep">... und natürlich auch das Testen von WissKi als Arbeits- und Analyseumgebung für epigraphische Fachdaten in CIDOC-CRM</li>
             </ul>
         </div>
 
         <div class="step">
             <div class="centered">
                 <h1 class="red">F I N I S</h1>
-                <h2 class="pull-up">Thank you</h2>
+                <h2 class="pull-up">Danke für die Aufmerksamkeit</h2>
                 <p><a href="#/step-31">Links, Software &amp; Attribution</a></p>
             </div>
         </div>

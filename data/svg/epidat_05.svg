@@ -73,7 +73,7 @@
             <title>A5-&gt;"Jehuda"</title>
 <path style="fill:none;stroke:blue;" d="M970,-211C1017,-211 1074,-211 1112,-211"/>
 <polygon style="fill:blue;stroke:blue;" points="1112,-214.5 1122,-211 1112,-207.5 1112,-214.5"/>
-<text text-anchor="middle" x="1023" y="-214.5" style="font-family:Times New Roman;font-size:10.00px;">rdf:P3_has_note</text>
+<text text-anchor="middle" x="1023" y="-214.5" style="font-family:Times New Roman;font-size:10.00px;">crm:P3_has_note</text>
 </g>
 <!-- http://www.steinheim&#45;institut.de/cgi&#45;bin/epidat?id=aha&#45;13 -->
 <g id="node9" class="node">
@@ -149,7 +149,7 @@
             <title>A2-&gt;"Elieser ben Josef Hakohen"</title>
 <path style="fill:none;stroke:blue;" d="M970,-43C1000,-43 1035,-43 1066,-43"/>
 <polygon style="fill:blue;stroke:blue;" points="1066,-46.5001 1076,-43 1066,-39.5001 1066,-46.5001"/>
-<text text-anchor="middle" x="1023" y="-46.5" style="font-family:Times New Roman;font-size:10.00px;">rdf:P3_has_note</text>
+<text text-anchor="middle" x="1023" y="-46.5" style="font-family:Times New Roman;font-size:10.00px;">crm:P3_has_note</text>
 </g>
 </g>
 </svg>

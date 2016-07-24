@@ -93,7 +93,7 @@
 			</statement>
 			<statement repeat="{/count(.//tei:person)}">
 				<subject type="bnode">/concat("E82_Actor_Appellation-", .//tei:person[$repeatIndex]/@xml:id)</subject>
-				<predicate prefix="rdf">P3_has_note</predicate>
+				<predicate prefix="crm">P3_has_note</predicate>
 				<object type="literal" lang="de">//tei:person[$repeatIndex]/tei:persName</object>
 			</statement>
 
