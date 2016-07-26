@@ -26,3 +26,15 @@ code + ul.numbering li {
 	margin-top: -10px;
 	margin-bottom: -20px;
 }
+
+.stats td {
+	line-height: 1.5;
+}
+
+.stats .col1 {
+	width: 53%;
+}
+
+.stats .col2 {
+	width: 47%;
+}
